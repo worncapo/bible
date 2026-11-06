@@ -76,5 +76,16 @@ You can also just call it directly for a quick lookup:
 ---
 
 <div align="center">
+
+<a href="https://github.com/worncapo/bible/releases/latest/download/net-bible.skill">
+  <img src="https://img.shields.io/badge/%E2%AC%87%20NET%20Bible%20Skill-2d6db3?style=for-the-badge" alt="Download NET Bible Skill">
+</a>
+&nbsp;&nbsp;
+<a href="https://github.com/worncapo/bible/releases/latest/download/niv-bible.skill">
+  <img src="https://img.shields.io/badge/%E2%AC%87%20NIV%20Skill-4a7c3f?style=for-the-badge" alt="Download NIV Skill">
+</a>
+
+<br><br>
+
 <sub>Source in <code>net/</code> and <code>niv/</code>. Skill files are in the <a href="https://github.com/worncapo/bible/releases/latest">latest release</a>.</sub>
 </div>
