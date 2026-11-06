@@ -15,7 +15,7 @@ I often use NIV for longer passages and NET for study. Asking about the Hebrew o
 
 ## How to install
 
-1. Download skill file
+**Step 1.** Download a skill:
 
 <div align="center">
 
@@ -29,7 +29,7 @@ I often use NIV for longer passages and NET for study. Asking about the Hebrew o
 
 </div>
 
-2. Go to [claude.ai/skills](https://claude.ai/skills), click **Upload skill**, select the file
+**Step 2.** Go to [claude.ai/skills](https://claude.ai/skills), click **Upload skill**, select the file
 
 
 ---
