@@ -33,6 +33,8 @@ I often use NIV for longer passages and NET for study. Asking about the Hebrew o
 
 **Step 2.** Go to [claude.ai/skills](https://claude.ai/skills), click **Upload skill**, select the file
 
+> **On mobile?** Tap the download link above, then open [claude.ai/skills](https://claude.ai/skills) in your browser. Tap **Upload skill** and pick the `.skill` file from your Files or Downloads folder.
+
 
 ---
 
