@@ -25,7 +25,7 @@ def lookup(ref_str, limit=None):
     v = ref["verses"][0]
     key = f"{ref['book']}|{ref['chapter']}|{v}"
     # Compact on-disk format: [[ref_str, votes], ...]
-    raw = tsk().get(key, [])
+    raw = tsk(key)
     refs = [{"ref": r[0], "votes": r[1]} for r in raw]
     if limit:
         refs = refs[:limit]

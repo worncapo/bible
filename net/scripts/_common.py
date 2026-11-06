@@ -84,7 +84,7 @@ def parse_reference(text: str) -> dict:
     return {"book": book, "chapter": chapter, "verses": verses}
 
 
-def tsk(book: str, chapter: int, verse: int) -> list:
+def tsk(key: str) -> list:
     global _tsk_cache
     p = DATA / "cross_references" / "tsk.json"
     if not p.exists():
@@ -92,7 +92,7 @@ def tsk(book: str, chapter: int, verse: int) -> list:
     if _tsk_cache is None:
         with open(p, encoding="utf-8") as f:
             _tsk_cache = json.load(f)
-    return _tsk_cache.get(book, {}).get(str(chapter), {}).get(str(verse), [])
+    return _tsk_cache.get(key, [])
 
 
 def strongs_greek(number: int) -> dict:
