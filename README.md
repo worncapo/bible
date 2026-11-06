@@ -29,6 +29,7 @@ I often use NIV for longer passages and NET for study. Asking about the Hebrew o
 
 </div>
 
+
 **Step 2.** Go to [claude.ai/skills](https://claude.ai/skills), click **Upload skill**, select the file
 
 
