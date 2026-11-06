@@ -6,7 +6,7 @@
 
 Earlier this year I made these for my own Bible study. I wanted to be able to ask Claude about a passage and get the actual text. Over time I found I could dig into the original Hebrew or Greek, read translator and study notes... So I built it as a Claude skill, and I've used it a ton, so I felt called to put it out for others as well.
 
-Mind you, none of this is meant to replace prayer, the holy spirit, your own critical thinking, or your relationship with Jesus. Don't be like me and let Claude chats become an idol! Talk and ask God first and foremost. This is just a tool after all.
+Mind you, none of this is meant to replace prayer, the holy spirit, your own critical thinking, or your relationship with Jesus. Don't be like me and let Claude chats become an idol! Pray and ask God for wisdom and guidance first and foremost. This is just a tool after all.
 
 There are two skills: one for the NET Bible (casual study, translator notes, Strong's lexicon) and one for the NIV (easy to read, quick lookup).
 I often use NIV for longer passages and NET for study. Asking about the Hebrew or Greek has been super cool and helped my walk with Christ immensely. It's dope when you actually know what God was intending to say!
