@@ -31,9 +31,9 @@ I often use NIV for longer passages and NET for study. Asking about the Hebrew o
 
 <br>
 
-**Step 2.** On [claude.ai](https://claude.ai), open the left sidebar → **Customize** → **Skills** → **+** → **Upload a skill**, and select the file
+**Step 2.** On [claude.ai](https://claude.ai), go to **Settings** → **Customize** → **Skills** → **Add** → **Upload file**, and select the file
 
-> **On mobile?** Download the file above, then open the Claude app → tap the sidebar or menu → **Customize** → **Skills** → **+** → **Upload a skill**, and pick the file from your Downloads.
+> **On mobile?** Download the file above, then open the Claude app → **Settings** → **Customize** → **Skills** → **Add** → **Upload file**, and pick the file from your Downloads.
 
 
 ---
