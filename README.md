@@ -20,11 +20,11 @@ I often use NIV for longer passages and NET for study. Asking about the Hebrew o
 <div align="center">
 
 <a href="https://github.com/worncapo/bible/releases/latest/download/net-bible.skill">
-  <img src="https://img.shields.io/badge/Download-NET%20Bible%20Skill-2d6db3?style=for-the-badge" alt="Download NET Bible Skill">
+  <img src="https://img.shields.io/badge/%E2%AC%87%20NET%20Bible%20Skill-2d6db3?style=for-the-badge" alt="Download NET Bible Skill">
 </a>
 &nbsp;&nbsp;
 <a href="https://github.com/worncapo/bible/releases/latest/download/niv-bible.skill">
-  <img src="https://img.shields.io/badge/Download-NIV%20Skill-4a7c3f?style=for-the-badge" alt="Download NIV Skill">
+  <img src="https://img.shields.io/badge/%E2%AC%87%20NIV%20Skill-4a7c3f?style=for-the-badge" alt="Download NIV Skill">
 </a>
 
 </div>
