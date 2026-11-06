@@ -1,6 +1,6 @@
 <div align="center">
 
-# Bible Skills for Claude
+# The Bible | Claude Skill
 
 </div>
 
