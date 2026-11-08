@@ -44,17 +44,21 @@ Flexible book names work: `Jn`, `john`, `1 Cor`, `1cor`, `ps`, `psalm`, `Psalms`
 
 ## Output Format
 
-Present the script output verbatim inside a blockquote. Single verse example:
+Present the script output verbatim inside a blockquote. Bold the reference header. Always cite `(NIV)` after the reference.
+
+Single verse:
 
 > **John 3:16 (NIV)**
 > 16 For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.
 
-Multi-verse passages flow as continuous prose with Unicode superscript verse numbers, no line breaks between verses:
+Multi-verse passages flow as continuous prose with Unicode superscript verse numbers. Paragraph breaks (blank lines) are inserted where the source text begins a new paragraph:
 
-> **1 Samuel 6:1-4 (NIV)**
-> ¹ When the ark of the LORD had been in Philistine territory seven months, ² the Philistines called for the priests and the diviners and said, "What shall we do with the ark of the LORD? ³ They answered, "If you return the ark of the god of Israel..." ⁴ The Philistines asked, "What guilt offering should we send?"
+> **Romans 8:1-17 (NIV)**
+> ¹ Therefore, there is now no condemnation for those who are in Christ Jesus, ² because through Christ Jesus the law of the Spirit who gives life has set you free from the law of sin and death…
+>
+> ¹² Therefore, brothers and sisters, we have an obligation—but it is not to the flesh, to live according to it…
 
-Always cite `(NIV)` after the reference. Bold the reference header.
+Poetry and wisdom books (Psalms, Proverbs, Job) render as one flowing block with no internal paragraph breaks.
 
 ## Accepted Book Names
 

@@ -10,12 +10,27 @@ Usage:
     python query_verse.py "1 Cor 13:4-7"
 """
 import argparse
+import json
 import re
 import sys
 import os
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from _common import niv, resolve_book
+
+_PARA_BREAKS = None
+
+def _para_breaks():
+    global _PARA_BREAKS
+    if _PARA_BREAKS is None:
+        data_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")
+        path = os.path.join(data_dir, "paragraph_breaks.json")
+        try:
+            with open(path, encoding="utf-8") as f:
+                _PARA_BREAKS = json.load(f)
+        except (OSError, json.JSONDecodeError):
+            _PARA_BREAKS = {}
+    return _PARA_BREAKS
 
 _REF_RE = re.compile(
     r"^\s*(?P<book>(?:\d\s+)?[A-Za-z][A-Za-z\s]+?)\s+"
@@ -77,15 +92,27 @@ def lookup(ref_str):
         text = chap.get(str(v)) or "[verse not found]"
         return f"{ref_label} (NIV)\n{v} {text}"
 
-    # Multi-verse: flowing prose with superscript numbers
-    parts = []
+    # Multi-verse: flowing prose with superscript numbers, paragraph breaks where applicable
+    breaks = set(_para_breaks().get(book, {}).get(str(chapter), []))
+
+    paragraphs = []  # list of (verse_tokens) per paragraph
+    current_para = []
+
     for v in verse_nums:
         text = chap.get(str(v))
-        if text is None:
-            parts.append(f"{to_sup(v)} [verse not found]")
+        token = f"{to_sup(v)} {text}" if text is not None else f"{to_sup(v)} [verse not found]"
+        # Start a new paragraph if this verse begins one (but not at the very first verse)
+        if v in breaks and current_para:
+            paragraphs.append(current_para)
+            current_para = [token]
         else:
-            parts.append(f"{to_sup(v)} {text}")
-    return f"{ref_label} (NIV)\n" + " ".join(parts)
+            current_para.append(token)
+
+    if current_para:
+        paragraphs.append(current_para)
+
+    body = "\n\n".join(" ".join(p) for p in paragraphs)
+    return f"{ref_label} (NIV)\n{body}"
 
 
 def main():
