@@ -44,12 +44,17 @@ Flexible book names work: `Jn`, `john`, `1 Cor`, `1cor`, `ps`, `psalm`, `Psalms`
 
 ## Output Format
 
-Present NIV text inline in the response:
+Present the script output verbatim inside a blockquote. Single verse example:
 
 > **John 3:16 (NIV)**
 > 16 For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.
 
-For multi-verse passages, use a blockquote with one verse per line. Always cite `(NIV)` after the reference.
+Multi-verse passages flow as continuous prose with Unicode superscript verse numbers, no line breaks between verses:
+
+> **1 Samuel 6:1-4 (NIV)**
+> ¹ When the ark of the LORD had been in Philistine territory seven months, ² the Philistines called for the priests and the diviners and said, "What shall we do with the ark of the LORD? ³ They answered, "If you return the ark of the god of Israel..." ⁴ The Philistines asked, "What guilt offering should we send?"
+
+Always cite `(NIV)` after the reference. Bold the reference header.
 
 ## Accepted Book Names
 

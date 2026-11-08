@@ -49,6 +49,12 @@ def parse_ref(text):
     return book, chapter, verses
 
 
+_SUP = str.maketrans("0123456789", "⁰¹²³⁴⁵⁶⁷⁸⁹")
+
+def to_sup(n: int) -> str:
+    return str(n).translate(_SUP)
+
+
 def lookup(ref_str):
     book, chapter, verses = parse_ref(ref_str)
     data = niv()
@@ -59,20 +65,27 @@ def lookup(ref_str):
     if not chap:
         raise ValueError(f"Chapter not found: {book} {chapter}")
     verse_nums = verses if verses else sorted(int(v) for v in chap.keys())
-    lines = []
-    for v in verse_nums:
-        text = chap.get(str(v))
-        if text is None:
-            lines.append(f"{book} {chapter}:{v} (NIV) [verse not found]")
-        else:
-            lines.append(f"{v} {text}")
     ref_label = f"{book} {chapter}"
     if verses:
         if len(verses) == 1:
             ref_label += f":{verses[0]}"
         else:
             ref_label += f":{verses[0]}-{verses[-1]}"
-    return f"{ref_label} (NIV)\n" + "\n".join(lines)
+
+    if len(verse_nums) == 1:
+        v = verse_nums[0]
+        text = chap.get(str(v)) or "[verse not found]"
+        return f"{ref_label} (NIV)\n{v} {text}"
+
+    # Multi-verse: flowing prose with superscript numbers
+    parts = []
+    for v in verse_nums:
+        text = chap.get(str(v))
+        if text is None:
+            parts.append(f"{to_sup(v)} [verse not found]")
+        else:
+            parts.append(f"{to_sup(v)} {text}")
+    return f"{ref_label} (NIV)\n" + " ".join(parts)
 
 
 def main():
